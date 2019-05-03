@@ -1,0 +1,39 @@
+body{
+    display:grid;
+    grid-auto-columns: auto auto;
+    grid-auto-rows: 10% auto;
+    background-color: #656565;
+}
+nav{
+    width:50px;
+    background-color: #4c4b4b;
+    .button1{
+        background-color:#262626;
+    }
+    ol
+    {
+        padding-top:0;
+        padding-bottom: 0;
+        padding-inline-start: 0;
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        img{
+            width:50px;
+            height:50px;
+        }
+        li{
+            p{
+                display:none;
+            }
+            &hover p{
+                display:inline-block;
+                transform: translate3D(100%,0,0);
+                
+
+            }
+        }
+    }
+}
