@@ -7,59 +7,95 @@ body {
 }
 section
 {
+    position: relative;
     display:flex;
     flex-direction: column;
     background: black;
-    p{
+    transition-duration:1s;
+    p
+    {
         width:100px;
         align-self: center;
-    }
-    p.animation1
-    {
-      color:white;
-      border-color: white;
-      border-style: solid;
-      transition-duration:1s;
-      &:hover{
+        color:white;
+        border-color: white;
+        border-style: solid;
+        transition-duration:1s;
+        &.animation1:hover{
             color:black;
             background-color:white;
         }
-    }
-    p.animation2
-    {
-      color:white;
-      border-color: white;
-      border-style: solid;
-      transition-duration:1s;
-      &:hover{
+        &.animation2:hover{
             background-color:white;
             color:black;
             transform: scale(1.5,1.5);
         }
-    }
-    p.animation3
-    {
-      color:white;
-      border-color: white;
-      border-style: solid;
-      transition-duration:1s;
-      &:hover{
+        &.animation3:hover{
             background-color:white;
             color:black;
             transform: translate3D(100%,0,0);
             /*//the paragraph do the salsa 
             margin-left:100%;*/
+
         }
+        &.animation4:hover{
+            visibility:hidden;
+             /*//make it bug
+            display:none;*/
+        }
+
+        &.animation5{
+            opacity:0;
+            transition: all 1s linear;
+            &:hover{
+                opacity:1;
+            }
+        }
+        &.animation6{
+            display:inline;
+            //z-index only works with positioned elements.
+            //z-index:0;
+        }
+        &.hidden{
+            //z-index only works with positioned elements.
+            //z-index: 1;
+            display:inline;
+            opacity: 0;
+            transform : translate3d(0%,-172%,0);
+            transition: all 1s linear;
+            &:hover{
+                opacity:1;
+                transform: translate3d(100%,-172%,0);
+            }
+        }
+        &.transparent{
+            opacity:0.2;
+            background-color: blue;
+            border-color: red;
+        }
+        &.animation7{
+            
+            transform : translate3d(0%,-170%,0);
+             /*//make it bug
+            display:none;*/
+            transition: all 1s linear;
+            &:hover{
+                transform : translate3d(100%,-170%,0);
+            }
+
+        }
+        &.animation10{
+            
+             /*//make it bug
+            display:none;*/
+            transition: all 1s linear;
+            &:hover{
+                transform : translate3d(100%,-170%,0);
+            }
+
+        }
+
     }
-    
-}
-section {
-    p{
-        color:white;
-        border-color: white;
-        border-style: solid;
-        transition-duration:1s;            
-    }
+
     &.animation1:hover{
         
         p{
@@ -86,4 +122,120 @@ section {
         }
 
     }
+    &.animation8{
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        p.animation8{
+            transform : translate3d(-100%,0,0);
+             /*//make it bug
+            display:none;*/
+            transition: all 1s linear;
+            &:hover{
+                transform : translate3d(0%,0%,0);
+            }
+        }
+    }
+    &.animation9{
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        p.animation9{
+            transform : translate3d(-100%,0,0);
+             /*//make it bug
+            display:none;*/
+            transition: all 1s linear;
+            &:hover{
+                transform : translate3d(0%,0%,0);
+            }
+        }
+    }
+    &.animation10
+    {
+        position: relative;
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        p.animation10
+        {
+            position: relative;
+            z-index:2;
+            transition-duration: 1s;
+            transition: transform 1s, opacity 0.01s;
+            transform : translate3d(-100%,0,0);
+            opacity:0;
+            
+        }
+        p.tobewhite
+        {
+            position: relative;
+            z-index:1;
+            transition-duration: 0.1s;
+            background: black 1% 100%;
+        }
+        &:hover
+        {
+            p.animation10
+            {
+
+                transform : translate3d(0%,0%,0);
+                opacity: 1;
+            }
+            p.tobewhite
+            {
+                 background: white 100% 100%;
+                 color:black;
+            }
+        }
+        
+    }
+    &.animation11
+    {
+        position: relative;
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        p.over
+        {
+            position:relative;
+            z-index:2;
+            transition-duration: 0.3s;
+            background-color:black;
+            color:white;
+            transform : translateX(-75%);
+        }
+        p.under
+        {   
+            position:relative;
+            z-index:1;
+            transition-duration: 0.01s;
+            background-color:black;
+            color:white;
+        }
+        &:hover
+        {
+            p.over
+            {
+                background-color:black;
+                color:white;
+                transform : translateX(0%);
+            }
+            p.under
+            {
+                background-color:white;
+                color:black;
+                
+            }
+        }
+    }
+   
+    
 }

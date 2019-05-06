@@ -18,21 +18,42 @@ nav{
         list-style: none;
         display:flex;
         flex-direction: column;
-        align-content: center;
-        align-items: center;
-        img{
-            width:50px;
-            height:50px;
-        }
+        justify-content: flex-start;
         li{
-            p{
-                display:none;
+            position: relative;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            img
+            {
+                width:50px;
+                height:50px;
+                position:relative;
+                z-index:1;
+                transition-duration: 0.01s;
             }
-            &hover p{
-                display:inline-block;
-                transform: translate3D(100%,0,0);
-                
 
+            p{      
+                padding:0;
+                position:relative;
+                z-index:2;
+                background-color:#262626;
+                color:white;
+                height:50px;
+                width:150px;
+                transition-duration: 1s;
+                transform : translateX(-100%);
+                opacity:0;
+            }
+            &:hover {
+                p
+                {
+                    transform : translateX(0%);
+                    opacity:1;
+                }
+                img{
+                    background-color:white;
+                }
             }
         }
     }
