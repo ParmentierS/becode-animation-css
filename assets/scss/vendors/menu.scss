@@ -1,0 +1,62 @@
+body{
+    display:grid;
+    grid-auto-columns: auto auto;
+    grid-auto-rows: 10% auto;
+    background-color: #656565;
+}
+nav{
+    width:50px;
+    background-color: #4c4b4b;
+    .button1{
+        background-color:#262626;
+    }
+    ol
+    {
+        //there was an automatic top and bottom margin added to the list
+        margin:0;
+        padding-top:0;
+        padding-bottom: 0;
+        padding-inline-start: 0;
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        li{
+            position: relative;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            img
+            {
+                width:50px;
+                height:50px;
+                position:relative;
+                z-index:1;
+                transition-duration: 1s;
+            }
+
+            div{      
+                position:relative;
+                z-index:2;
+                background-color:#262626;
+                color:white;
+                height:50px;
+                min-width:100px;
+                text-align:center;
+                transition-duration: 1s;
+                transform : translateX(-50px);
+                opacity:0;
+            }
+            &:hover {
+                div
+                {
+                    transform : translateX(0%);
+                    opacity:1;
+                }
+                img{
+                    background-color:white;
+                }
+            }
+        }
+    }
+}
