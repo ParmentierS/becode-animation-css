@@ -113,12 +113,15 @@ section
         }
     
     }
-    &.animation3:hover{
-    
-        p{
-            color:black;
-            background-color:white;
-            transform: translate3D(100%,0,0);
+    &.animation3{
+        
+
+        &:hover{
+            p{
+                color:black;
+                background-color:white;
+                transform: translate3D(100%,0,0);
+            }
         }
 
     }
