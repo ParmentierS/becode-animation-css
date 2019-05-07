@@ -12,6 +12,8 @@ nav{
     }
     ol
     {
+        //there was an automatic top and bottom margin added to the list
+        margin:0;
         padding-top:0;
         padding-bottom: 0;
         padding-inline-start: 0;
@@ -30,23 +32,23 @@ nav{
                 height:50px;
                 position:relative;
                 z-index:1;
-                transition-duration: 0.01s;
+                transition-duration: 1s;
             }
 
-            p{      
-                padding:0;
+            div{      
                 position:relative;
                 z-index:2;
                 background-color:#262626;
                 color:white;
                 height:50px;
-                width:150px;
+                min-width:100px;
+                text-align:center;
                 transition-duration: 1s;
                 transform : translateX(-50px);
                 opacity:0;
             }
             &:hover {
-                p
+                div
                 {
                     transform : translateX(0%);
                     opacity:1;
