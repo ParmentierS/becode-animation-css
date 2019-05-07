@@ -1,103 +1,59 @@
 body {
   background-color: black;
   color: white;
-  text-align: center;
-}
+  text-align: center; }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: black;
-}
-
-section p {
-  width: 100px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-section p.animation1 {
-  color: white;
-  border-color: white;
-  border-style: solid;
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-section p.animation1:hover {
-  color: black;
-  background-color: white;
-}
-
-section p.animation2 {
-  color: white;
-  border-color: white;
-  border-style: solid;
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-section p.animation2:hover {
-  background-color: white;
-  color: black;
-  -webkit-transform: scale(1.5, 1.5);
-      -ms-transform: scale(1.5, 1.5);
-          transform: scale(1.5, 1.5);
-}
-
-section p.animation3 {
-  color: white;
-  border-color: white;
-  border-style: solid;
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-section p.animation3:hover {
-  background-color: white;
-  color: black;
-  -webkit-transform: translate3D(100%, 0, 0);
-      -ms-transform: translate3D(100%, 0, 0);
-          transform: translate3D(100%, 0, 0);
-  /*//the paragraph do the salsa 
-            margin-left:100%;*/
-}
+  flex-direction: column;
+  background: black; }
+  section p {
+    width: 100px;
+    align-self: center; }
+  section p.animation1 {
+    color: white;
+    border-color: white;
+    border-style: solid;
+    transition-duration: 1s; }
+    section p.animation1:hover {
+      color: black;
+      background-color: white; }
+  section p.animation2 {
+    color: white;
+    border-color: white;
+    border-style: solid;
+    transition-duration: 1s; }
+    section p.animation2:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.5, 1.5); }
+  section p.animation3 {
+    color: white;
+    border-color: white;
+    border-style: solid;
+    transition-duration: 1s; }
+    section p.animation3:hover {
+      background-color: white;
+      color: black;
+      transform: translate3D(100%, 0, 0);
+      /*//the paragraph do the salsa 
+      margin-left:100%;*/ }
 
 section p {
   color: white;
   border-color: white;
   border-style: solid;
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
+  transition-duration: 1s; }
 section.animation1:hover p {
   color: black;
-  background-color: white;
-}
-
+  background-color: white; }
 section.animation2:hover p {
   color: black;
   background-color: white;
-  -webkit-transform: scale(1.5, 1.5);
-      -ms-transform: scale(1.5, 1.5);
-          transform: scale(1.5, 1.5);
-}
-
+  transform: scale(1.5, 1.5); }
 section.animation3:hover p {
   color: black;
   background-color: white;
-  -webkit-transform: translate3D(100%, 0, 0);
-      -ms-transform: translate3D(100%, 0, 0);
-          transform: translate3D(100%, 0, 0);
-}
+  transform: translate3D(100%, 0, 0); }
+
+/*# sourceMappingURL=drill.css.map */
