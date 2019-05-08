@@ -1,0 +1,117 @@
+$globalbcolor:#f2f2f2;
+$floatbcolor:#e94c3d;
+$floattcolor:white;
+$articlebcolor:white;
+$articletcolor:#5A5A5A;
+$article1sttitlecolor:black;
+$article2ndtitlecolor:#E28DA4;
+$shadowboxcolor:#CEC8C8;
+$WIDTHARTICLECONTENT:365px;
+$TRANSITION : all 250ms ease-in;
+body{
+    background-color: $globalbcolor;
+}
+main{
+    position: relative;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+}
+article{
+    margin:5px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width:$WIDTHARTICLECONTENT;
+    text-align: center;
+    overflow:hidden;
+    transition: $TRANSITION;
+    max-height:500px;
+    section.image{
+        position: relative;
+        z-index:1;
+        color:$floattcolor;
+        overflow:hidden;
+        p.date{
+            position:absolute;
+            z-index: 2;
+            right:5%;
+            top:0%;
+            background-color: $floatbcolor;
+            border-radius:50%;
+            text-align: center;
+            width:50px;
+            height:50px;
+        }
+        img{
+            position:relative;
+            z-index: 1;
+            width:$WIDTHARTICLECONTENT;
+            height:$WIDTHARTICLECONTENT;
+            transition: $TRANSITION;
+        }
+        
+
+    }
+    section.text{
+        position: absolute;
+        z-index:2;
+        bottom:0;
+        background-color: $articlebcolor;
+        color:$articletcolor;
+        transition: $TRANSITION;
+        header{
+            
+            h2{
+                position:relative;
+                color:$article1sttitlecolor;
+                text-transform: uppercase;
+            }
+            h3{
+                position: relative;
+                color:$article2ndtitlecolor;
+                &.floatingLink{
+                
+                    text-transform: uppercase;
+                    background-color:$floatbcolor;
+                    color:$floattcolor;
+                    padding:5px;
+                    position:absolute;
+                    top:-20%;
+                    left:0%;
+                }
+            }
+
+        }
+    }
+    footer{
+        position: relative;
+        z-index: 3;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 50px;
+        background-color: $articlebcolor;
+    }
+    &:hover{
+
+        max-height:none;
+        box-shadow:2px 2px 2px 2px $shadowboxcolor, -2px -2px 2px 2px $shadowboxcolor;
+        section.text{
+            //bottom:50px;
+            
+            transition: $TRANSITION;
+            //transform: translateY(-100px);
+        }
+        section.image
+        {
+            img{
+                transition: $TRANSITION;
+                transform : scale(1.5);
+                opacity :0.5;
+            }
+        }
+    
+    }
+}

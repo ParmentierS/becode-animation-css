@@ -1,7 +1,13 @@
 body {
   background-color: black;
   color: white;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition-duration: 1s; }
 
 section {
   position: relative;
@@ -76,6 +82,14 @@ section {
     color: black;
     background-color: white;
     transform: translate3D(100%, 0, 0); }
+  section.animation12 p {
+    transition-duration: 1s;
+    background-image: linear-gradient(to left, black 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position: right bottom; }
+  section.animation12:hover p {
+    transition-duration: 1s;
+    background-position: left bottom; }
   section.animation8 {
     display: flex;
     flex-direction: row;
