@@ -34,6 +34,7 @@ article {
   -webkit-transition: all 250ms ease-in;
   -o-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
+  max-height: 500px;
 }
 
 article section.image {
@@ -68,7 +69,7 @@ article section.image img {
 article section.text {
   position: absolute;
   z-index: 2;
-  bottom: -50px;
+  bottom: 0;
   background-color: white;
   color: #5A5A5A;
   -webkit-transition: all 250ms ease-in;
@@ -114,6 +115,7 @@ article footer {
 }
 
 article:hover {
+  max-height: none;
   -webkit-box-shadow: 2px 2px 2px 2px #CEC8C8, -2px -2px 2px 2px #CEC8C8;
           box-shadow: 2px 2px 2px 2px #CEC8C8, -2px -2px 2px 2px #CEC8C8;
 }
@@ -122,9 +124,6 @@ article:hover section.text {
   -webkit-transition: all 250ms ease-in;
   -o-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
-  -webkit-transform: translateY(-100px);
-      -ms-transform: translateY(-100px);
-          transform: translateY(-100px);
 }
 
 article:hover section.image img {

@@ -1,158 +1,361 @@
 body {
   background-color: black;
   color: white;
-  text-align: center; }
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+}
 
 section {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: black;
-  transition-duration: 1s; }
-  section p {
-    width: 100px;
-    align-self: center;
-    color: white;
-    border-color: white;
-    border-style: solid;
-    transition-duration: 1s; }
-    section p.animation1:hover {
-      color: black;
-      background-color: white; }
-    section p.animation2:hover {
-      background-color: white;
-      color: black;
-      transform: scale(1.5, 1.5); }
-    section p.animation3:hover {
-      background-color: white;
-      color: black;
-      transform: translate3D(100%, 0, 0);
-      /*//the paragraph do the salsa 
-      margin-left:100%;*/ }
-    section p.animation4:hover {
-      visibility: hidden;
-     /*//make it bug
-    display:none;*/ }
-    section p.animation5 {
-      opacity: 0;
-      transition: all 1s linear; }
-      section p.animation5:hover {
-        opacity: 1; }
-    section p.animation6 {
-      display: inline; }
-    section p.hidden {
-      display: inline;
-      opacity: 0;
-      transform: translate3d(0%, -172%, 0);
-      transition: all 1s linear; }
-      section p.hidden:hover {
-        opacity: 1;
-        transform: translate3d(100%, -172%, 0); }
-    section p.transparent {
-      opacity: 0.2;
-      background-color: blue;
-      border-color: red; }
-    section p.animation7 {
-      transform: translate3d(0%, -170%, 0);
-     /*//make it bug
-    display:none;*/
-      transition: all 1s linear; }
-      section p.animation7:hover {
-        transform: translate3d(100%, -170%, 0); }
-    section p.animation10 {
-     /*//make it bug
-    display:none;*/
-      transition: all 1s linear; }
-      section p.animation10:hover {
-        transform: translate3d(100%, -170%, 0); }
-  section.animation1:hover p {
-    color: black;
-    background-color: white; }
-  section.animation2:hover p {
-    color: black;
-    background-color: white;
-    transform: scale(1.5, 1.5); }
-  section.animation3:hover p {
-    color: black;
-    background-color: white;
-    transform: translate3D(100%, 0, 0); }
-  section.animation8 {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center; }
-    section.animation8 p.animation8 {
-      transform: translate3d(-100%, 0, 0);
-     /*//make it bug
-    display:none;*/
-      transition: all 1s linear; }
-      section.animation8 p.animation8:hover {
-        transform: translate3d(0%, 0%, 0); }
-  section.animation9 {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center; }
-    section.animation9 p.animation9 {
-      transform: translate3d(-100%, 0, 0);
-     /*//make it bug
-    display:none;*/
-      transition: all 1s linear; }
-      section.animation9 p.animation9:hover {
-        transform: translate3d(0%, 0%, 0); }
-  section.animation10 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center; }
-    section.animation10 p.animation10 {
-      position: relative;
-      z-index: 2;
-      transition-duration: 1s;
-      transition: transform 1s, opacity 0.01s;
-      transform: translate3d(-100%, 0, 0);
-      opacity: 0; }
-    section.animation10 p.tobewhite {
-      position: relative;
-      z-index: 1;
-      transition-duration: 0.1s;
-      background: black 1% 100%; }
-    section.animation10:hover p.animation10 {
-      transform: translate3d(0%, 0%, 0);
-      opacity: 1; }
-    section.animation10:hover p.tobewhite {
-      background: white 100% 100%;
-      color: black; }
-  section.animation11 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center; }
-    section.animation11 p.over {
-      position: relative;
-      z-index: 2;
-      transition-duration: 0.3s;
-      background-color: black;
-      color: white;
-      transform: translateX(-75%); }
-    section.animation11 p.under {
-      position: relative;
-      z-index: 1;
-      transition-duration: 0.01s;
-      background-color: black;
-      color: white; }
-    section.animation11:hover p.over {
-      background-color: black;
-      color: white;
-      transform: translateX(0%); }
-    section.animation11:hover p.under {
-      background-color: white;
-      color: black; }
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+}
 
-/*# sourceMappingURL=drill.css.map */
+section p {
+  width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+section p.animation1:hover {
+  color: black;
+  background-color: white;
+}
+
+section p.animation2:hover {
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1.5, 1.5);
+      -ms-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+
+section p.animation3:hover {
+  background-color: white;
+  color: black;
+  -webkit-transform: translate3D(100%, 0, 0);
+      -ms-transform: translate3D(100%, 0, 0);
+          transform: translate3D(100%, 0, 0);
+  /*//the paragraph do the salsa 
+            margin-left:100%;*/
+}
+
+section p.animation4:hover {
+  visibility: hidden;
+  /*//make it bug
+            display:none;*/
+}
+
+section p.animation5 {
+  opacity: 0;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section p.animation5:hover {
+  opacity: 1;
+}
+
+section p.animation6 {
+  display: inline;
+}
+
+section p.hidden {
+  display: inline;
+  opacity: 0;
+  -webkit-transform: translate3d(0%, -172%, 0);
+          transform: translate3d(0%, -172%, 0);
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section p.hidden:hover {
+  opacity: 1;
+  -webkit-transform: translate3d(100%, -172%, 0);
+          transform: translate3d(100%, -172%, 0);
+}
+
+section p.transparent {
+  opacity: 0.2;
+  background-color: blue;
+  border-color: red;
+}
+
+section p.animation7 {
+  -webkit-transform: translate3d(0%, -170%, 0);
+          transform: translate3d(0%, -170%, 0);
+  /*//make it bug
+            display:none;*/
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section p.animation7:hover {
+  -webkit-transform: translate3d(100%, -170%, 0);
+          transform: translate3d(100%, -170%, 0);
+}
+
+section p.animation10 {
+  /*//make it bug
+            display:none;*/
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section p.animation10:hover {
+  -webkit-transform: translate3d(100%, -170%, 0);
+          transform: translate3d(100%, -170%, 0);
+}
+
+section.animation1:hover p {
+  color: black;
+  background-color: white;
+}
+
+section.animation2:hover p {
+  color: black;
+  background-color: white;
+  -webkit-transform: scale(1.5, 1.5);
+      -ms-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+
+section.animation3:hover p {
+  color: black;
+  background-color: white;
+  -webkit-transform: translate3D(100%, 0, 0);
+      -ms-transform: translate3D(100%, 0, 0);
+          transform: translate3D(100%, 0, 0);
+}
+
+section.animation12 p {
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, black), color-stop(50%, blue));
+  background-image: -webkit-linear-gradient(right, black 50%, blue 50%);
+  background-image: -o-linear-gradient(right, black 50%, blue 50%);
+  background-image: linear-gradient(to left, black 50%, blue 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+section.animation12:hover p {
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  background-position: left bottom;
+}
+
+section.animation8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.animation8 p.animation8 {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  /*//make it bug
+            display:none;*/
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section.animation8 p.animation8:hover {
+  -webkit-transform: translate3d(0%, 0%, 0);
+          transform: translate3d(0%, 0%, 0);
+}
+
+section.animation9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.animation9 p.animation9 {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  /*//make it bug
+            display:none;*/
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+section.animation9 p.animation9:hover {
+  -webkit-transform: translate3d(0%, 0%, 0);
+          transform: translate3d(0%, 0%, 0);
+}
+
+section.animation10 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.animation10 p.animation10 {
+  position: relative;
+  z-index: 2;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition: opacity 0.01s, -webkit-transform 1s;
+  transition: opacity 0.01s, -webkit-transform 1s;
+  -o-transition: transform 1s, opacity 0.01s;
+  transition: transform 1s, opacity 0.01s;
+  transition: transform 1s, opacity 0.01s, -webkit-transform 1s;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+}
+
+section.animation10 p.tobewhite {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  background: black 1% 100%;
+}
+
+section.animation10:hover p.animation10 {
+  -webkit-transform: translate3d(0%, 0%, 0);
+          transform: translate3d(0%, 0%, 0);
+  opacity: 1;
+}
+
+section.animation10:hover p.tobewhite {
+  background: white 100% 100%;
+  color: black;
+}
+
+section.animation11 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.animation11 p.over {
+  position: relative;
+  z-index: 2;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: black;
+  color: white;
+  -webkit-transform: translateX(-75%);
+      -ms-transform: translateX(-75%);
+          transform: translateX(-75%);
+}
+
+section.animation11 p.under {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.01s;
+       -o-transition-duration: 0.01s;
+          transition-duration: 0.01s;
+  background-color: black;
+  color: white;
+}
+
+section.animation11:hover p.over {
+  background-color: black;
+  color: white;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+section.animation11:hover p.under {
+  background-color: white;
+  color: black;
+}
